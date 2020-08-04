@@ -1,0 +1,10 @@
+body{
+	margin: 0px;
+}
+.container h1{
+float: left;
+}
+.container .navbar .navbar-inner{
+	float: right;
+
+}

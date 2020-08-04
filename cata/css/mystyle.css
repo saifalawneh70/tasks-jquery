@@ -1,0 +1,111 @@
+body{
+	margin:0;
+	
+}
+.navbar-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 430px;
+  margin-bottom: 0;
+  list-style: none;
+}
+.b_lo_re{
+	padding-left: 130px;
+}
+.navbar-brand{
+
+}
+.navbar-light .navbar-brand {
+  color: rgba(0, 0, 0, 0.9);
+  padding-left: 50px;
+}
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  height: 80px;
+}
+/***************************************/
+.text-center{
+	margin-top: 100px;
+	color: #fff;
+}
+.myclass1{
+  display: block !important;
+  padding-left: 300px;
+  padding-top: 15px;
+}
+/***************************************************************/
+.my-pt-10{
+	padding-top: 3rem !important;
+}
+.pt-5-extra{
+	padding-top: 4rem !important;
+}
+.d_hi{
+	height: 745px;
+}
+.my-pl-5 {
+	padding-left: 10rem !important;
+}
+.my_ml-5 {
+margin-left: 17rem !important;	
+}
+.my-ml-min{
+	margin-left:-85px
+}
+.mt-5,
+.my-5 {
+  margin-top: 6rem !important;
+}
+.ml-5,
+.mx-5 {
+  margin-left: 6rem !important;
+}
+.my-pl-6{
+padding-left: 12rem !important;
+}
+.display-4-p{
+	 font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-4-p-card{
+	font-size: 1.1rem;
+	font-weight: 500;
+  line-height: 1.2;
+}
+.my_card-img-top{
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 295px;
+}
+.mt-0-min{
+	margin-top: 5px;
+	color: grey;
+	text-decoration: line-through;
+}
+.my-green-card-mt-10{
+margin-top: 370px;
+color: white;
+}
+.mt-ml-5-card2{
+	margin-left: 30px;
+	margin-top: 70px;
+}
+.pt-5-divid-img{
+	padding-top: 70px;
+}
+.mt-4cards{
+	margin-top: 65px;
+}

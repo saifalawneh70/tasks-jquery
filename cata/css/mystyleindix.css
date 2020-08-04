@@ -1,0 +1,43 @@
+body{
+
+}
+.bg-secondary{
+	background-color: #2c3e50 !important; 
+	height: 100px;
+}
+.bg-therty{
+	background-color: #1abc9c !important;
+	height :650px;
+}
+.icon_big{
+	padding-left: 600px;padding-top: 250px; font-size: 200px;color: #fff;
+}
+.icon_big_h1{
+	color: #fff;
+}
+.star-icon{
+	font-size: 50px; color: #fff;
+}
+.star-icon-h3{
+	
+	color: #fff;
+	padding-top: 15px;
+}
+.bg-therty-div{
+	text-align: center; margin-left: 600px; padding-top: 150px;
+}
+.div-next1{
+	text-align: center; color: black; font-size: 50px; padding-left: 775px;
+}
+.my-pl-5{
+	padding-left: 85px;
+}
+.div_next2{
+	color: #fff;
+	font-size: 25px;
+}
+.div_next2-2{
+	color: #fff;
+	font-size: 25px;
+	padding-left: 50px;
+}

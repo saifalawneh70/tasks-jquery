@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>
+  
+ </title>
+     <link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script type="text/javascript">
+  $("document").ready(function(){ 
+       
+         $(".submit1").click(function() {
+           if ($('input:radio[value="correct"]').is(':checked')) {             
+            $("#correct-answer").css('color' ,'green');
+             }
+             else{
+             if ($('input:radio[value="wrong"]').is(':checked')){
+              $("#incorrect-answer1").css('color' ,'red');
+                $("#incorrect-answer2").css('color' ,'red');
+                $("#incorrect-answer3").css('color' ,'red');
+                $("#correct-answer").css('color' ,'green');
+             }
+             }
+    });
+            
+         $("#text-area-word").keyup(function(){
+           var words;
+            words= $.trim($("#text-area-word").val()).split(" ");
+           $('#number-of-word').html("number of words"+words.length);
+
+          if (words.length>12)
+           {
+           	$("#text-area-word").attr("disabled","true");
+            $("#app").html("Send your Text   "+"<button>Send</button>");
+           }
+         });
+         
+
+    
+            /*$(".my-text-area").change(function(){
+             
+               var words;       
+             do{
+              words= $.trim($("#text-area-word").val()).split(" ");
+               $("#number-of-word").html("Word Counts:"+words.length);
+             }
+            while(words<13);
+             $("#text-area-word").attr("disabled", true);
+             });
+
+             */ 
+              
+              var displayValue = '';   
+              $('#result').text(displayValue);
+              $("#num7").click(function() {
+                displayValue +="7";
+                $('#result').text(displayValue);
+                });
+              $("#num8").click(function() {
+                displayValue +="8";
+                $('#result').text(displayValue);
+                });
+               $("#num9").click(function() {
+                displayValue +="9";
+                $('#result').text(displayValue);
+                });
+                $("#num6").click(function() {
+                displayValue +="6";
+                $('#result').text(displayValue);
+                });
+                $("#num4").click(function() {
+                displayValue +="4";
+                $('#result').text(displayValue);
+                });
+                $("#num5").click(function() {
+                displayValue +="5";
+                $('#result').text(displayValue);
+                });
+                $("#num3").click(function() {
+                displayValue +="3";
+                $('#result').text(displayValue);
+                });
+                $("#num2").click(function() {
+                displayValue +="2";
+                $('#result').text(displayValue);
+                });
+                $("#num1").click(function() {
+                displayValue +="1";
+                $('#result').text(displayValue);
+                });
+                $("#num0").click(function() {
+                displayValue +="0";
+                $('#result').text(displayValue);
+                });
+                $("#numc").click(function() {
+                displayValue ="";
+                $('#result').text(displayValue);
+                });
+                 $("#numdiv").click(function() {
+                displayValue +="/";
+                $('#result').text(displayValue);
+                });
+                  $("#numsubt").click(function() {
+                displayValue +="-";
+                $('#result').text(displayValue);
+                });
+                   $("#nummulti").click(function() {
+                displayValue +="*";
+                $('#result').text(displayValue);
+                });
+                    $("#numadd").click(function() {
+                displayValue +="+";
+                $('#result').text(displayValue);
+                });
+                 $("#numdote").click(function() {
+                displayValue +=".";
+                $('#result').text(displayValue);
+                });
+                $("#numequal").click(function() {
+                  displayValue = eval(displayValue);
+                  $('#result').text(displayValue);
+                  displayValue = '0';
+                });
+
+                
+                
+                 $("#total-price").click(function() {
+                   
+                   if($('#Pepsi-Q').length > 0 && $('#Pepsi-Q').val() != '')
+                   {
+                   	var PepsQty= parseFloat($("#Pepsi-Q").val());
+                   }
+                   else
+                   	{
+                   		var PepsQty= 0.0;    
+                   		$("#Pepsi-Q").val('0');
+                   	}
+
+                    var x=(PepsQty*0.35);
+                    $('#Pepsi-amount').text(x);
+                   
+                   if($('#cho-Q').length > 0 && $('#cho-Q').val() != ''){
+                   var choQty= $("#cho-Q").val();
+                   }
+                   else
+                   {
+                   	var choQty=0.0;
+                   	$("#cho-Q").val(0);
+                   }
+                   var y=parseFloat(choQty)*1;
+                   $('#cho-amount').text(y);
+                    
+                    if($('#Chicken-Q').length > 0 && $('#Chicken-Q').val() != ''){
+
+                    var chiQty= $("#Chicken-Q").val();
+                    }else
+                    {
+                     var chiQty=0.0;
+                     $("#Chicken-Q").val(0);
+                    }
+                   var z=parseFloat(chiQty)*2.5;
+                   $('#chicken-amount').text(z);
+                   
+
+                   $('#re').text(z+y+x);
+                 });
+                  
+
+                  $(".create-table").click(function(){
+                    if($('#num-row').length > 0 && $('#num-row').val() != '' && $('#num-col').length > 0 && $('#num-col').val() != '')
+                        {
+                         var NumOfRow=  parseInt ($("#num-row").val());
+                         var NumOfCol=  parseInt ($("#num-col").val());
+                         var tableBody='<table border=1 style ="width :100% ;height :400px;">';
+                         for (var i = 0; i < NumOfRow; i++) {
+                    	 tableBody +="<tr>";
+                    	 for (var j = 0;  j < NumOfCol  ; j++) {
+                    		tableBody +="<td>";
+
+                    		tableBody +="</td>";
+                    	 }
+                    	 tableBody +="</tr>";
+                         }
+                         tableBody +="</table>";
+                         $('#t1').html(tableBody);
+                         }
+                         else{    
+                            alert("please enter number of col or row");
+                         }
+                  });
+                   $("#re-pass").change(function(){
+                       var numPass=$("#pass").val();
+                       var numRePass=$("#re-pass").val();
+                       
+                        if($('#pass').length > 0 && $('#pass').val() != '' && $('#re-pass').length>0 && $('#re-pass').val() != ''){
+                       if (numPass==numRePass)
+                       {
+                           
+                         if (numPass.length >0 && numPass.length <=3) {
+                             $("#state").html("Weak password");
+                         	$("#myBar").css("width", "30%");
+                         	$("#myBar").css("background-color", "green");
+                         }
+                         if (numPass.length >3 && numPass.length <=6) {
+                             $("#state").html("Meduim password");
+                         	$("#myBar").css("width", "60%");
+                         	$("#myBar").css("background-color", "orange");
+                         }
+                          if (numPass.length >6) {
+                             $("#state").html("Strong  password");
+                         	$("#myBar").css("width", "90%");
+                         	$("#myBar").css("background-color", "red");
+                         }
+                       }
+                       else{
+                       	alert("password don't equal re-type");
+                       }
+                       }
+                       else
+                       {
+                       	alert("please enter password or Re-Type password");
+                       }
+                    });
+                   
+                   $("#last-button").click(function(){
+                    var x = $("#last-input").val();
+                     var previousNum;
+                    var numTags=Math.floor((Math.random() * 9) + 1);
+                    var startTag=["<h1>","<h2>","<h3>","<h4>","<h5>","<h6>","<p>","<a>","<button>","<span>"];
+                    var endTag=["</h1>","</h2>","</h3>","</h4>","</h5>","</h6>","</p>","</a>","</button>","</span>"];
+                     while(previousNum == numTags){
+                     	 numTags=Math.floor((Math.random() *9) + 1);
+                      }
+                     previousNum = numTags;
+                     var z='';
+                      z +=""+startTag[previousNum]+x+endTag[previousNum];
+                    //console.log(z);
+                    $("#print").html(z);
+                    
+                   });
+
+                   window.onscroll = function() {scrollFunction()};
+                   function scrollFunction() {
+                      if (document.documentElement.scrollTop > 20) {
+                        $("#topbutton").css("display" , "block");
+                      } else {
+                     $("#topbutton").css("display" , "none");
+                    }
+                   }
+                   $("#topbutton").click(function(){
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0; 
+                   });
+                   
+
+         });
+
+
+ </script>
+ <style type="text/css">
+   #calculator {
+            width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #result {
+            width: 200px;
+            height: 35px;
+            background-color: #cddecc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: right;
+            line-height: 34px;
+            font-family: digital;
+            font-size: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 0px 3px;
+        }
+         .key {
+            width: 35px;
+            background-color: red;
+            color: white;
+            display: inline-block;
+            margin: 3px 0px 8px 3px;
+            vertical-align: bottom;
+            text-align: center;
+            padding: 5px 0px 5px 0px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 3px 0 #a1a1a1, 0 2px 5px rgba(0, 0, 0, .75);
+        }
+        .my-text-area{
+         margin-top: 50px;
+         margin-left: 100px;
+        }
+        #myProgress {
+         width: 15%;
+         background-color: grey;
+         display: inline-block;
+        }
+
+        #myBar {
+          width: 1%;
+          height: 10px;
+          background-color: green;
+         }
+        #topbutton {
+         position: fixed;
+         bottom: 10px;
+         margin-left: 91%;
+         font-size: 18px;
+         background-color: #303030;
+         color: white;
+         cursor: pointer;
+         padding: 25px;
+         border-radius: 10px;
+}
+ </style>
+</head>
+
+<body>
+ <button id="topbutton">Top</button>
+<div style="margin-top: 100px; margin-left: 100px;">
+ <h3>Q1. What is the name of technical instructor? </h3>
+ <form>
+        <input type="radio" id="r1" name="group1" value="wrong">
+        <span  id="incorrect-answer1" >Ahmad  </span>
+        <input type="radio" id="r2" name="group1" value="wrong">
+        <span id="incorrect-answer2" >anas</span>
+        <input type="radio" id="rc" name="group1" value="correct">
+        <span id="correct-answer">Salameh</span>
+        <input type="radio" id="r3" name="group1" value="wrong">
+        <span id="incorrect-answer3" >mai</span>    
+ </form>
+ <button   class="submit1" >Submit</button>
+     <hr>
+</div>
+
+<div id="calculator">
+        <div id="result"></div>
+        <span class="key clear-key" id="numc">C</span>
+        <span class="key" id="num9">9</span>
+        <span class="key" id="num8">8</span>
+        <span class="key" id="num7">7</span>
+        <span class="key" id="num6">6</span>
+        <span class="key" id="num5">5</span>
+        <span class="key" id="num4">4</span>
+        <span class="key" id="num3">3</span>
+        <span class="key" id="num2">2</span>
+        <span class="key" id="num1">1</span>
+        <span class="key" id="num0">0</span>
+        <span class="key" id="num00">00</span>
+        <span class="key" id="numdiv">/</span>
+        <span class="key" id="nummulti">*</span>
+        <span class="key" id="numdote">.</span>
+        <span class="key" id="numadd">+</span>
+        <span class="key equal-key" id="numequal">=</span>
+        <span class="key" id="numsubt">-</span>
+    </div>
+<hr>
+<div class="my-text-area">
+ <p id="number-of-word" > </p>
+  <textarea id="text-area-word" rows="5" cols="50"></textarea>
+  <div id="app">
+  	
+  </div>
+</div>
+<hr>
+<div style="width: 100% ; margin-left: 100px; margin-top: 50px;">
+	
+<table border="1">
+  <tr>
+    <th>product</th>
+    <th>price</th>
+    <th>Qty</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Pepsi</td>
+    <td>0.35</td>
+    <td><input id="Pepsi-Q" type="text" name=""></td>
+    <td id="Pepsi-amount"></td>
+  </tr>
+  <tr>
+    <td>Chocolate</td>
+    <td>1</td>
+    <td><input id="cho-Q" type="text" name=""></td>
+    <td id="cho-amount"></td>
+  </tr>
+  <tr>
+    <td>Chicken</td>
+    <td>2.50</td>
+    <td><input id="Chicken-Q" type="text" name=""></td>
+    <td id="chicken-amount"></td>
+  </tr>
+  <tr>
+    <td>total</td>
+    <td id="re" colspan="3"></td>
+  </tr>
+</table>
+<button id="total-price"> total</button>
+</div>
+<hr>
+<div style="margin-top: 40px; width: 100%; height:500px; ">
+	number of row<input id="num-row" type="text" name="">
+    number of col<input id="num-col" type="text" name="">
+    <button class="create-table"> create</button>
+<div id="t1" style="margin-top: 50px; width: 100%; height:500px; " >
+ table will appear here
+</div>
+</div>
+<hr>
+<div class="password">
+	password<input id="pass" type="password" name="">
+	Re-Type <input id="re-pass" type="password" name="">
+     <div  id="myProgress">
+        <div id="myBar"></div>
+        </div>
+        <p style="display: inline-block;" id="state"></p>
+</div>
+<hr>
+<div class="last-div">
+	<input id ="last-input" type="text" name="">
+	<button id="last-button"> Create</button>
+    <span id="print">
+    </span>
+</div>
+
+
+
+
+
+</body>
+</html>

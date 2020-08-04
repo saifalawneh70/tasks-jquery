@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+    <link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="js/jquery.fireworks.js"></script>
+ <script type="text/javascript">
+ 	  $("document").ready(function(){ 
+      const card = $('.flip-card');
+      var boolCard=true;
+      var fcard ;
+      var scard ;
+      var count=0;
+      var dataId1;
+      var dataId2;
+      $(card).click(function() {
+       this.classList.toggle('flip-card-inner');
+      if(boolCard)
+      {
+      	boolCard=false;
+      	fcard=this;
+        dataId1 = $(this).attr("data-id");
+      }
+      else{
+       scard=this;
+       boolCard=true;
+       dataId2 = $(this).attr("data-id");
+       if(dataId1 === dataId2){
+       setTimeout(function(){
+       $(scard).hide();
+       $(fcard).hide();
+       count=count+1;
+       if(count==6)
+      {
+      $('.fire').fireworks({ sound: true, opacity: 0.9, width: '100%', height: '100%' });
+      }
+       }, 2000);
+       }
+       else{
+       	setTimeout(function(){
+        $(fcard).removeClass('flip-card-inner');
+        $(scard).removeClass('flip-card-inner');
+       	 }, 2000);
+       }
+      }
+      });
+
+
+      });
+
+ </script>
+<style type="text/css">
+	
+body{
+	margin: 0;
+	background-color: #9d5900;
+}
+
+.fire { margin:0 auto; width:100%; height:100%;}
+   
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+ }
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card.flip-card-inner {
+  transform: rotateY(180deg);
+  transition: 2s;
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+ 
+  transform: rotateY(180deg);
+  transition: 2s;
+}
+</style>
+
+<body>
+
+
+<table border="1" style="">
+	<tr>
+	<td >
+	   <div class="flip-card " data-id="b">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/b letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+
+	</td>
+	<td>
+		 <div class="flip-card" data-id="a">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/a letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+	</td>
+	<td>
+		 <div class="flip-card" data-id="s">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/s letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+	</td>
+	<td> <div class="flip-card" data-id="j">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/j letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+   </td>
+    </tr>
+    <tr>
+	<td>
+		 <div class="flip-card" data-id="j">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/j letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+	</td>
+	<td>
+		 <div class="flip-card" data-id="a">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/a letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+	</td>
+	<td>
+		 <div class="flip-card" data-id="s">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/s letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+	</td>
+	<td>
+		 <div class="flip-card" data-id="c">
+       <div class="flip-card-inner" >
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/c letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+	</td>
+    </tr>
+    <tr>
+	<td>
+		 <div class="flip-card" data-id="e">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/e letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+	</td>
+	<td>
+		 <div class="flip-card" data-id="e">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/e letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+	</td>
+	<td>
+		 <div class="flip-card" data-id="c">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/c letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+
+	</td>
+	<td>
+		 <div class="flip-card" data-id="b">
+       <div class="flip-card-inner">
+       <div class="flip-card-front">
+       <img src="img/HTU _Logo.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       <div class="flip-card-back">
+       <img src="img/b letter.png" alt="Avatar" style="width:200px;height:200px;">
+       </div>
+       </div>
+       </div>
+	</td>
+    </tr>
+</table>
+
+
+<div class="fire">
+
+</div>
+
+
+</body>
+</html>
